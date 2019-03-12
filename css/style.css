@@ -34,6 +34,7 @@ h1, h2, h3{
 a.bigbutton{
     background-color: #b48826;
     padding: 0.7em;
+    font-weight: 600;
     color: #fff;
     border-radius: 2em;
     text-align: center;
@@ -76,23 +77,6 @@ header .logo img{
     display: block;
 }
 
-header nav{
-    transition: max-height .4s, padding .4s;
-    -webkit-transition: max-height .4s, padding .4s, opacity .4s;
-    -moz-transition: max-height .4s, padding .4s, opacity .4s;
-    -o-transition: max-height .4s, padding .4s, opacity .4s;
-    -ms-transition: max-height .4s, padding .4s, opacity .4s;
-    opacity: 1;
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 10;
-    background-color: #fff;
-    overflow: hidden;
-    padding: 1em;
-    width: 100%;
-}
-
 header .bar{
     height: 5em;
     border-bottom: 1px solid #2d7363;
@@ -110,20 +94,50 @@ header .hamburger div{
     margin: 0.2em 0;
 }
 
-header nav a{
+nav{
+    transition: max-height .4s, opacity .4s;
+    -webkit-transition: max-height .4s, opacity .4s;
+    -moz-transition: max-height .4s,  opacity .4s;
+    -o-transition: max-height .4s, opacity .4s;
+    -ms-transition: max-height .4s, opacity .4s;
+    opacity: 1;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 10;
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+}
+
+nav a{
+    transition: padding .4s;
+    -webkit-transition: padding .4s;
+    -moz-transition: padding .4s;
+    -o-transition: padding .4s;
+    -ms-transition: padding .4s;
     text-decoration: none;
-    color: #2d7363;
-    padding-bottom: 0.3em;
+    color: #007a87;
     position: relative;
-    margin: 0.5em 1em;
     display: block;
     width: 100%;
+    padding: 0.5em 1em;
     font-weight: 600;
 }
 
 .banner{
     overflow: hidden;
     position: relative;
+}
+
+.banner h1.title{
+    min-width: 7em;
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 10;
+    margin: 0 0.5em;
 }
 
 .banner img{
@@ -149,6 +163,7 @@ header nav a{
 
 .home-content h2, .home-content h3{
     display: inline-block;
+    line-height: 1em;
     margin: 0.5em auto;
 }
 
@@ -162,7 +177,7 @@ header nav a{
 
 .items > div{
     flex: 1;
-    margin: 0.5em;
+    margin: 0.5em 0;
     background-color: #faf8f3;
     min-width: 19em;
 }
@@ -192,13 +207,13 @@ header nav a{
 }
 
 @media only screen and (max-width: 899px) {
-    header nav {
+    nav {
         max-height: 30em;
     }
 
-    header #shownav:checked  ~ nav{
+    #shownav:checked  ~ nav{
         max-height: 0;
-        padding: 0 1em;
+        padding: 0;
         opacity: 0;
     }
 
@@ -214,6 +229,11 @@ header nav a{
         align-items: center;
     }
 
+    .banner h1.title{
+        right: 10%;
+        min-width: 20em;
+    }
+
     .banner img {
         width: 100%;
         transform: none;
@@ -227,7 +247,7 @@ header nav a{
         display: none;
     }
 
-    header nav{
+    nav{
         display: block;
         opacity: 1;
         flex: 1;
@@ -238,25 +258,31 @@ header nav a{
         align-items: center;
     }
 
-    header nav a{
+    nav a{
         text-align: center;
         width: unset;
         display: inline-block;
+        margin: 0 1em;
+        padding: 0.5em 0;
     }
 
-    header nav a::after{
+    nav a::after{
         border-bottom: 0.15em solid;
         content: "";
         position: absolute;
         width: 0;
         bottom: 0;
         transition: width .2s, left .2s, opacity .1s;
+        -webkit-transition: width .2s, left .2s, opacity .1s;
+        -moz-transition: width .2s, left .2s, opacity .1s;
+        -o-transition: width .2s, left .2s, opacity .1s;
+        -ms-transition: width .2s, left .2s, opacity .1s;
         left: 50%;
         opacity: 0;
         border-radius: 0.1em;
     }
 
-    header nav a:not(.bigbutton):hover::after{
+    nav a:not(.bigbutton):hover::after, nav a.current::after{
         width: 100%;
         left: 0;
         opacity: 1;
@@ -268,5 +294,9 @@ header nav a{
 
     .items{
         flex-direction: row;
+    }
+
+    .items > div {
+        margin: 0.5em;
     }
 }

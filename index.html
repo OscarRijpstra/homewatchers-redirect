@@ -11,6 +11,13 @@
 </head>
 <body>
     <header>
+        <div class="above desktop">
+            <a href="#">Media</a>
+            <a href="#">Gastenboek</a>
+            <a href="#">Vacature</a>
+            <a href="#">Contact</a>
+            <a href="#" class="withborder">Reserveer</a>
+        </div>
         <input class="hidden" id="shownav" checked type="checkbox"/>
         <div class="bar">
             <div class="logo">
@@ -29,10 +36,13 @@
             <a href="#">Opdrachtgevers</a>
             <a href="#">Homewatchers</a>
             <a href="#">Werkwijze</a>
-            <a href="#">Media</a>
-            <a href="#">Contact</a>
             <a href="#" class="mobile">Aanvragen</a>
-            <a class="bigbutton reserve desktop" href="#">Aanvragen</a>        
+            <a class="bigbutton reserve desktop" href="#">Aanvraag info</a>
+            <a href="#" class="mobile small">Media</a>
+            <a href="#" class="mobile small">Gastenboek</a>    
+            <a href="#" class="mobile small">Reserveer</a>
+            <a href="#" class="mobile small">Vacature</a>
+            <a href="#" class="mobile small">Contact</a>
         </nav>
     </header>
     <main>
@@ -44,9 +54,8 @@
             </div>
         </div>
         <div class="home-content">
-            <a class="bigbutton mobile" href="#">Aanvragen</a>
+            <a class="bigbutton mobile" href="#">Aanvraag info</a>
             <h2>Oppas huis & huisdieren op maat</h2>
-            <!--<h3>Ontworpen door liefhebbers, en dat voel je</h3>-->
             <div class="items">
                 <div>
                     <img src="img/os1.jpg">
@@ -57,7 +66,7 @@
                     </div>
                 </div>
                 <div>
-                    <img src="img/os2.jpg">
+                    <img src="img/os3.jpg">
                     <div>
                         <h3>Titel 2</h3>
                         <p>Aliquam auctor, leo accumsan ultrices tempus, diam lacus facilisis dolor, ut tincidunt felis elit in lorem. Praesent interdum, est at placerat tristique, nulla sem condimentum leo, ut egestas nibh dui in nulla. Suspendisse nec diam dapibus, iaculis enim et, convallis urna. Ut vitae sagittis eros. Quisque malesuada libero eros. Fusce risus nulla, luctus ut feugiat quis, eleifend eu nunc. In hac habitasse platea dictumst. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut ullamcorper lobortis ipsum, eu consectetur massa iaculis et. Nulla varius fringilla mi vitae commodo.
@@ -68,7 +77,23 @@
         </div>
     </main>
     <footer>
-        <span>Copyright © <span id="currentyear"></span> HomeWatchers.nl, alle rechten voorbehouden I KvK 66974178</span>
+        <div class="footerwrapper">
+            <img class="grasflow" src="img/gras-overlay.png"> 
+            <img class="gras" src="img/gras.jpg">
+            <div class="items">
+                <div>
+                    <h3>Contact</h3>
+                    <p>
+                        <a href="mailto:info@homewatchers.nl">info@homewatchers.nl</a><br>
+                        Postbus 96<br>
+                        6680 AB<br>
+                        Bemmel<br>
+                        <a href="tel:+31 481 450 315">+31 (0)481 450 315</a><br>
+                    </p>
+                </div>
+            </div>
+            <span class="copyright">Copyright © <span id="currentyear"></span> HomeWatchers.nl, alle rechten voorbehouden I KvK 66974178</span>
+        </div>
     </footer>
     <script src="js/index.js"></script>
 </body>

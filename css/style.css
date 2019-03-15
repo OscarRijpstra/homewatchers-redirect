@@ -75,7 +75,7 @@ header .bar .logo a{
 }
 
 header .bar .logo h2 {
-    font-size: 20pt;
+    font-size: 18pt;
     margin: 0;
 }
 
@@ -177,7 +177,7 @@ footer{
 .home-content h2, .home-content h3 {
     display: inline-block;
     line-height: 1em;
-    margin: 1em auto;
+    margin: 0.6em auto;
 }
 
 .items {
@@ -192,7 +192,7 @@ footer{
     flex: 1;
     margin: 0.5em 0;
     background-color: #faf8f3;
-    min-width: 19em;
+    min-width: 17em;
 }
 
 .items>div img {
@@ -221,7 +221,7 @@ footer{
     margin: 0 1em 0.3em;
 }
 
-@media only screen and (max-width: 899px) {
+@media only screen and (max-width: 979px) {
     nav {
         max-height: 30em;
     }
@@ -233,9 +233,15 @@ footer{
     .desktop {
         display: none;
     }
+
+    .home-content .bigbutton{
+        display: block;
+        min-width: 18em;
+        margin: auto;
+    }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 980px) {
     header {
         display: flex;
         justify-content: center;
@@ -269,7 +275,7 @@ footer{
         text-align: center;
         width: unset;
         display: inline-block;
-        margin: 0 1em;
+        margin: 0 0.7em;
         padding: 0.5em 0;
     }
     nav a::after {

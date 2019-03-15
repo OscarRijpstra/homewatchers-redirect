@@ -170,14 +170,14 @@ footer{
 
 .home-content {
     display: flex;
-    margin: 0.5em 1em;
+    margin: 0 1em;
     flex-direction: column;
 }
 
 .home-content h2, .home-content h3 {
     display: inline-block;
     line-height: 1em;
-    margin: 0.5em auto;
+    margin: 1em auto;
 }
 
 .items {
@@ -185,7 +185,7 @@ footer{
     flex-wrap: wrap;
     flex-direction: column;
     max-width: 70em;
-    margin: 1em auto;
+    margin: 0 auto;
 }
 
 .items>div {

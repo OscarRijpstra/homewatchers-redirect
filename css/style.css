@@ -416,6 +416,10 @@ main .items p {
     main .items>div {
         margin: 0.5em;
     }
+
+    header .bar {
+        height: 6em;
+    }
     
     header .bar .logo a {
         margin-left: 5em;

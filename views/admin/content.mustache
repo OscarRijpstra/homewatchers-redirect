@@ -1,0 +1,28 @@
+{{> head}}
+<form method="POST" action="/admin/{{page}}">
+<div class="banner">
+    <div>
+        <input name="bannertitle" class="bannertitle" type="text" placeholder="Titel" maxlength="50" value="{{content.banner_text}}" />
+        <img alt="" class="overlay" src="/img/overlay.png">
+        <img alt="" src="/img/{{content.banner_src}}"> 
+    </div>
+</div>
+<div class="content">
+    <input name="pagetitle" class="pagetitle" type="text" placeholder="Titel" maxlength="20" value="{{content.page_title}}" />
+    <div class="items">
+        {{#content.items}}
+        <div>
+            <img src="/img/{{img_src}}">
+            <div>
+                <input name="blocktitle" type="text" class="blocktitle" placeholder="Titel" maxlength="20" value="{{title}}"/>
+                <textarea name="blocktext" class="blocktext" maxlength="500" placeholder="Tekst">{{text}}</textarea>
+            </div>
+        </div>
+        {{/content.items}}
+    </div>
+    <div class="save">
+        <input type="submit" value="Opslaan"/>
+    </div>
+</div>
+</form>
+{{> footer}}

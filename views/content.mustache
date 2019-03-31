@@ -1,0 +1,24 @@
+{{> head}}
+<div class="banner">
+    <div>
+        <h1 class="title">{{content.banner_text}}</h1>
+        <img alt="" class="overlay" src="/img/overlay.png">
+        <img alt="" src="/img/{{content.banner_src}}"> 
+    </div>
+</div>
+<div class="content">
+    <a class="bigbutton aanvraaginfo" href="#">Homewatchers gezocht</a>
+    <h2>{{content.page_title}}</h2>
+    <div class="items">
+        {{#content.items}}
+        <div>
+            <img src="/img/{{img_src}}">
+            <div>
+                <h3>{{title}}</h3>
+                <p>{{text}}</p>
+            </div>
+        </div>
+        {{/content.items}}
+    </div>
+</div>
+{{> footer}}

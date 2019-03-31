@@ -1,1 +1,6 @@
 /ignore
+/node_modules
+.env
+/img
+/css
+/js

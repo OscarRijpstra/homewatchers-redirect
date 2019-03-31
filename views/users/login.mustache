@@ -1,0 +1,21 @@
+{{> head}}
+<div class="content">
+    <h2>Inloggen</h2>
+    <div class="items">
+        <div class="small">
+            <form method="POST" action="/login">
+                <ul class="errors">
+                    {{#errors}}
+                    <li>{{msg}}</li>
+                    {{/errors}}
+                </ul>
+                <label>Gebruikersnaam</label>
+                <input type="text" maxlength="30" name="username" placeholder="gebruikersnaam" required/>
+                <label>Wachtwoord</label>
+                <input type="password" maxlength="60" name="password" placeholder="wachtwoord" required/>
+                <input type="submit" value="Login"/>
+            </form>
+        </div>
+    </div>
+</div>
+{{> footer}}

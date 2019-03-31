@@ -27,6 +27,63 @@ h1, h2, h3 {
     margin: 0.5em 0;
 }
 
+input, textarea{
+    resize: none;
+    background-color: #fff;
+    border: 0.1em solid #f0f0f0;
+    padding: 0.6em 0.4em;
+    font-size: 12pt;
+    font-family: 'Titillium Web', sans-serif;
+    border-radius: 0.5em;
+    -webkit-appearance: none;
+    position: relative;
+}
+
+input[type="submit"],
+input[type="button"]{
+    background-color: #b48826;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color .2s;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    -ms-transition: background-color .2s;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #bf9c4c;
+}
+
+input[type="submit"]{
+    margin-top: 1em;
+}
+
+form label{
+    margin: 0 0.5em;
+    display: block;
+}
+
+form input{
+    display: block;
+    margin: 0.5em 0.2em;
+    width: calc(100% - 0.4em);
+}
+
+form .errors{
+    margin: 0;
+    padding: 0;
+}
+
+form .errors li{
+    color: red;
+    display: block;
+    font-weight: bold;
+    margin: 0.5em;
+}
+
 .center {
     text-align: center;
 }
@@ -66,14 +123,13 @@ header {
     position: sticky;
     position: -o-sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20;
     background-color: #fff;
 }
 
 header .bar .logo{
     flex: 1;
 }
-
 
 header .bar .logo h2 {
     font-size: 18pt;
@@ -157,22 +213,24 @@ nav .small{
 }
 
 main{
-    min-height: calc(100vh - 28.9em);
+    min-height: calc(100vh - 27.9em);
 }
 
 footer{
     font-size: 11pt;
     text-align: center;
     display: block;
-    /* position: absolute; */
     bottom: 0;
     width: 100%;
 }
 
 footer .footerwrapper{
     position: relative;
+    background-image: url(/img/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
-    height: 25em;
 }
 
 footer .footerwrapper .grasflow{
@@ -192,17 +250,9 @@ footer .footerwrapper .gras{
 
 footer .footerwrapper .items,
 footer .footerwrapper .copyright{
-    position: absolute;
 }
 
-footer .footerwrapper .items{
-    top: 50%;
-    display: -webkit-box;   display: -webkit-flex;   display: -ms-flexbox;   display: flex;
-    width: calc(100% - 2em);
-    margin: 1em;
-    justify-content: center;
-    transform: translateY(-50%);
-}
+footer .footerwrapper .items{max-width: 65em;margin: 4em 0.5em 1em;max-width: 64em;}
 
 footer .footerwrapper .items > div{
     text-align: left;
@@ -212,6 +262,10 @@ footer .footerwrapper .items a,
 footer .footerwrapper .items h3,
 footer .footerwrapper .items p{
     color: #fff;
+}
+
+footer .footerwrapper a:hover{
+    text-decoration: underline;
 }
 
 footer .footerwrapper .copyright{
@@ -267,13 +321,16 @@ footer .footerwrapper .copyright{
     display: block;
 }
 
-.home-content {
+.content {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 1em;
+    margin: 0 0.5em;
+    max-width: 60em;
     flex-direction: column;
+    position: relative;
+    margin: auto;
 }
 
 .content h2, .content h3 {
@@ -289,9 +346,9 @@ main .items {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     max-width: 70em;
     width: 100%;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -299,8 +356,10 @@ main .items>div {
     flex: 1;
     margin: 0.5em 0;
     background-color: #faf8f3;
-    min-width: 17em;
+    min-width: 15em;
     border-radius: 1em;
+    max-width: 40em;
+    margin: 0.5em;
 }
 
 main .items>div img {
@@ -325,8 +384,103 @@ main .items p {
     text-align: justify;
 }
 
+main .items p::first-letter{
+    font-size: 14pt;
+    font-weight: bold;
+    color: #2d7363;
+    margin-right: 0.05em;
+}
+
+.content a.aanvraaginfo{
+    z-index: 3;
+    margin: 1em 0.5em;
+    display: block;
+    max-width: 25em;
+    align-self: center;
+    width: calc(100% - 2em);
+}
+
 .bigbutton.reserve {
     padding: 0.5em 1em;
+}
+
+.items .small{
+    max-width: 25em;
+}
+
+.items form{
+    margin: 0.5em;
+}
+
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.5em;
+}
+
+.dashboard a{
+    padding: 1em;
+    flex: 1;
+    margin: 0.3em;
+    max-width: 21em;
+    text-align: center;
+    background-color: #faf8f3;
+    color: #2d7363;
+    border-radius: 1em;
+    min-width: 15em;
+}
+
+.banner .bannertitle{
+    background-color: #ffffff75;
+    color: #fff;
+    position: absolute;
+    top: 68%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 5;
+    width: 100%;
+    max-width: 30em;
+    left: 50%;
+    font-size: 14pt;
+}
+
+.content input.pagetitle{
+    align-self: center;
+    max-width: 30em;
+    min-width: 15em;
+    text-align: center;
+    font-size: 14pt;
+    margin: 1em;
+}
+
+.content div .blocktitle,
+.content div .blocktext{
+    display: block;
+    width: 100%;
+    margin: 0.5em 0;
+}
+
+.content div .blocktext{
+    min-height: 10em;
+}
+
+.content .save{
+    text-align: right;
+    margin: 0 0.4em;
+}
+
+.content .save input[type="submit"]{
+    width: 100%;
+    margin: 1em 0;
+}
+
+.notfound{
+    text-align: center;
+}
+
+.notfound p{
+    margin: 2em 0;
 }
 
 @media only screen and (max-width: 929px) {
@@ -342,7 +496,7 @@ main .items p {
         display: none;
     }
 
-    .home-content .bigbutton{
+    .content .bigbutton{
         display: block;
         min-width: 18em;
         margin: auto;
@@ -440,18 +594,19 @@ main .items p {
         display: inline-block;
     }
     
-    footer .footerwrapper {
-        height: 35em;
-    }
-
-    footer .footerwrapper .gras{
-        width: 100%;
-        position: absolute;
-        transform: none;
-        bottom: 0;
-    }
-
     footer .footerwrapper .items{
-        transform: translateY(calc(-50% - -3em));
+        margin: 12vw auto 1em;
+    }
+
+    .content .save input[type="submit"]{
+        max-width: 15em;
+        margin-left: auto;
+    }
+
+    .content a.aanvraaginfo {
+        position: absolute;
+        top: -2em;
+        max-width: 15em;
+        align-self: flex-start;
     }
 }
